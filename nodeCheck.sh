@@ -5,12 +5,13 @@
 #
 ######################################################
 
-TNT_ADDR="$1"
+HOME="$1"
+TNT_ADDR="$2"
 
-if [ -z "$2" ]
+if [ -z "$3" ]
 then
 	$HOME/go/src/github.com/SomniaStellarum/TNTNodeChecker/bin/TNTNodeChecker --tnt=$TNT_ADDR
 else
-	HOST=$2
+	HOST=$3
 	$HOME/go/src/github.com/SomniaStellarum/TNTNodeChecker/bin/TNTNodeChecker --tnt=$TNT_ADDR --host=$HOST
 fi
